@@ -1,0 +1,22 @@
+import appJar
+from appJar import gui
+
+betterplayer = gui("Window", "800x600")
+betterplayer.setIcon("/Users/femijohn/Desktop/icon.png")
+betterplayer.setTitle('Better Player')
+
+betterplayer.setBg("black", override= False, tint= True)
+betterplayer.setFont("Arial", 18)
+betterplayer.addTable("Music Library", [["Song", "Artist", "Album", "Genre", "Rating", "Related Mood"],
+                                  ["Feds Did a Sweep", "Future", "Future", "Trap", "5 stars", "Non Chalant"]])
+
+def press(btn):
+    betterplayer.addFileEntry("Add file")
+
+
+betterplayer.addButton("Add File", press)
+
+betterplayer.go()
+
+
+# hi, I'm having difficulty creating a button that adds entries into the table, can anyone help. 
